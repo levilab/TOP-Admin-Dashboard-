@@ -1,0 +1,267 @@
+/* Overview setup */
+* {
+    margin: 0;
+    padding: 0;
+    /* max-height: 100vh; */
+}
+body {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1fr;
+}
+
+.sidebar {
+    grid-column: 1/2;
+    background-color: rgb(17, 129, 177);
+    font-weight: bold;
+    color: white;
+    padding: 16px 48px 16px 12px;
+}
+
+.content-body {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    box-sizing: border-box;
+}
+
+.header {
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto auto;
+    box-shadow: 0px 4px 12px -8px rgb(77, 77, 77);
+    min-height: 20%;
+}
+
+
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(232, 239, 245);
+    min-height: 80%;
+    box-sizing: border-box;
+    padding: 32px 32px 32px 24px;
+    gap: 24px;
+}
+/* Header section */
+img.icon{
+    width: 32px;
+}
+
+.left {
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    padding: 24px 0px 24px 24px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px;
+    gap: 16px;
+}
+
+input {
+    border-radius: 12px;
+    background-color: lightgrey;
+    width: 100%;
+    height: 32px;
+}
+
+.sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 36px;
+    font-weight: bold;
+}
+
+
+
+.notification {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    align-items: center ;
+    justify-content: space-evenly;
+    padding: 18px 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.notification > img.avatar {
+    width: 64px;
+    border-radius: 50%;
+}
+
+
+
+.sub-header > div {
+    height: auto;
+}
+
+div .name {
+    font-size: 24px;
+}
+
+.sub-header > img.avatar {
+    width: 75px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.button {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    padding-right: 24px;
+}
+
+button {
+    width: 30%;
+    height: 2.5rem;
+    border-radius: 24px;
+    font-weight: bold;
+    background-color: rgb(17, 129, 177);
+    color: white;
+    font-size: 18px;
+}
+
+/* Sidebar */
+.title,
+.body,
+.extra {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 16px 24px;
+    height: auto;
+}
+
+.title {
+    font-size: 28px;
+}
+
+.body,
+.extra {
+    padding: 32px 32px;
+    gap: 16px 16px;
+    font-size: 20px;
+}
+
+.title img{
+    width: 48px;
+    grid-column: 1/2;
+    filter: brightness(0) invert(1);
+}
+
+.title p,
+.body p,
+.extra p {
+    grid-column: 2/3;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.body img,
+.extra img {
+    width: 36px;
+    grid-column: 1/2;
+    filter: brightness(0) invert(1);
+}
+
+/* Main contents */
+
+
+.main-content > .primary {
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 16px;
+    box-sizing: border-box; 
+}
+
+.box-container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(min-content,1fr));
+    grid-template-rows: repeat(3,minmax(min-content,1fr));
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+
+.box-container > * {
+    border-radius: 16px;
+    box-shadow: 4px 4px 10px -2px lightgray, -5px 0px 0px orange;
+    background-color: white;
+    padding: 16px;
+    display: grid;
+}
+
+.box-container > .box > .icon {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.box-container > .box > .icon > * {
+    width: 24px;
+}
+
+/* sub-content */
+.main-content > .sub-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.sub-content > .box1, .box2{
+    border-radius: 16px;
+    padding: 16px 48px;
+    background-color: white;
+    box-shadow: 4px 4px 10px -2px lightgray;
+    font-size: small;
+    margin-top: 16px;
+}
+
+.sub-content > .box1 {
+    margin-bottom: 24px;
+}
+
+.sub-content > .box2 {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.sub-content > .box1 > p:nth-of-type(1),
+.sub-content > .box1 > p:nth-of-type(2) {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1.5px solid lightgrey;
+}
+
+.sub-content > .box:last-of-type {
+    margin: 0px 32px 36px 32px;
+} */
+
+.sub-content h3 {
+    text-align: left;
+    width: 80%;
+}
+
+.sub-content > .box2 > .user {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.sub-content > .box2 > .user > img {
+    width: 15%;
+    border-radius: 50%;
+    border: 1px solid red;
+}
